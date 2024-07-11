@@ -1,0 +1,38 @@
+{% include ("header.html") %}
+
+<h3 class="text-center">LISTA DE CLIENTES</h3>
+<div class="text-center">
+    <a href="/clientes/create" class="btn btn-primary">Nuevo</a>
+</div>
+<div class="table-responsive">
+  <table class="table">
+    <br>
+    <thead class="table table-dark">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Marca</th>
+        <th scope="col">Patente</th>
+        <th scope="col">Fecha</th>
+        <th scope="col">Tareas</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for cliente in clientes %}
+      <tr class="">
+        <td scope="row">{{ loop.index}}</td>
+        <td>{{ cliente['Marca'] }}</td>
+        <td>{{ cliente['Patente'] }}</td>
+        <td>{{ cliente['Fecha'] }}</td>
+        <td>{{ cliente['Tareas'] }}</td>
+        <td>
+            <a href="/clientes/edit/{{cliente['id']}}" class="btn btn-success">Editar</a>
+            <a href="/clientes/borrar/{{cliente['id']}}" class="btn btn-danger">Eliminar</a> 
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% include ("footer.html") %}

@@ -1,0 +1,37 @@
+{% include 'header.html' %}
+
+<div class="p-5 mb-4 bg-light rounded-3" style="background-color: burlywood;">
+  <div class="container-fluid py-5" style="background-color: aquamarine;">
+    <h1 class="display-5 fw-bold" style="text-align: center;">AutoSolutions</h1>
+    <p class="col-md-8 fs-4" style="text-align: center;">Soluciones integrales para todos los problemas eléctricos y electrónicos automotrices.</p>
+    <div class="row">
+      <div class="col 4"></div>
+      <div class="col 4">
+          <div class="card">
+              <div class="card-header">Inicio Sesión</div>
+              <div class="card-body">
+                  <form action="/clientes" method="">
+                      <div class="mb-3">
+                          <label for="mail" class="form-label">Usuario</label>
+                          <input type="email" class="form-control" name="mail" id="" aria-describedby="helpId" placeholder="abcd@gho.com" />
+                      </div>
+                      <div class="mb-3">
+                          <label for="clave" class="form-label">Clave</label>
+                          <input type="text" class="form-control" name="clave" id="" aria-describedby="helpId" placeholder="*****" />
+                      </div>
+                      <div class="mb-3"> 
+                          <label for="sesion_abierta" class="form-label">Mantener sesión abierta</label>
+                          <input type="checkbox" class="" name="sesion_abierta" id="" aria-describedby="helpId" />
+                      </div>
+                      <button type="submit" class="btn btn-primary">Login</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+      <div class="col 4"></div>
+      
+    </div>
+      {% include 'footer.html' %}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+{% include 'header.html' %}
+
+<div class="row">
+  <div class="col 4"></div>
+  <div class="col 4">
+    <div class="card">
+      <div class="card-header">EDITAR CLIENTE</div>
+      <div class="card-body">
+        <form action="/clientes/edit/actualizar" method="post">
+          <input type="hidden" name="txt-id" value="{{ clientes['id']}}" />
+          <div class="mb-3">
+            <label for="" class="form-label">Marca</label>
+            <input type="text" class="form-control" name="marca" id="" aria-describedby="helpId" placeholder="marca" value="{{ clientes['Marca']}}" />
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">Patente</label>
+            <input type="text" class="form-control" name="patente" id="" aria-describedby="helpId" placeholder="patente" value="{{ clientes['Patente']}}" />
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">Fecha</label>
+            <input type="date" class="form-control" name="fecha" id="" aria-describedby="helpId" value="{{ clientes['Fecha']}}" />
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">Tareas</label>
+            <input type="text" class="form-control" name="tareas" id="" aria-describedby="helpId" placeholder="tareas" value="{{ clientes['Tareas']}}" />
+          </div>
+          <button type="submit" class="btn btn-primary">Actualizar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col 4"></div>
+</div>
+
+{% include 'footer.html' %}

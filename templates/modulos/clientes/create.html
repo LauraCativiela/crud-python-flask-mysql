@@ -1,0 +1,39 @@
+{% include 'header.html' %}
+
+<div class="row">
+    <div class="col 6"></div>
+    <div class="col 6">
+        <div class="card">
+            <div class="card-header">AGREGAR CLIENTE</div>
+            <div class="card-body">
+                <form action="/clientes/create/guardar" method="post">
+                    <div class="mb-3">
+                        <label for="" class="form-label">Marca</label>
+                        <input type="text" class="form-control" name="marca" id="" aria-describedby="helpId" placeholder="Marca" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Patente</label>
+                        <input type="text" class="form-control" name="patente" id="" aria-describedby="helpId" placeholder="Patente" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Fecha</label>
+                        <input type="date" class="form-control" name="fecha" id="" aria-describedby="helpId" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Tareas</label>
+                        <input type="text" class="form-control" name="tareas" id="" aria-describedby="helpId" />
+                    </div>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col 6"></div>
+    
+</div>
+
+
+
+
+
+{% include 'footer.html' %}
